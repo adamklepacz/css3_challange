@@ -2,4 +2,96 @@
 
     CODE YOUR STYLES BELOW!
 
+    Course : CSS3 in 30 Days
+    Author : Brad Hussey
+    Website: codecollege.ca
+
    ====================================== */
+
+
+@media print {
+
+  /* Hide unwanted elemenents */
+  body::before,
+  .course-files, 
+  .logo,
+  .final-result::before,
+  .final-result::after,
+  .info::before,
+  .info::after,
+  img,
+  .final-result h2,
+  .info h2 {
+    display: none;
+  }
+
+  /* Global typography reset */
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16pt;
+    line-height: 24pt;
+    background: none;
+    color: #000;
+  }
+
+  /* Layout reset */
+  .final-result,
+  .info,
+  section, 
+  footer {
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #000;
+  }
+
+  section:first-child::before {
+    border: none;
+  }
+
+  /* Specifics */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    font-size: 24pt;
+    line-height: 30pt;
+    margin: 10pt;
+  }
+
+  h1 {
+    font-size: 50pt;
+    margin: 0 0 20pt;
+    text-align: center;
+    width: 100%;
+    transform: none;
+  }
+
+  h1 small {
+    font-size: 24pt;
+    color: #888;
+    margin: 0 0 10pt;
+  }
+
+  .info p {
+    color: #000;
+  }
+
+  a:link {
+    margin: 0;
+  }
+
+  a::after {
+    content: " [" attr(href) "]";
+  }
+
+  footer a:link, 
+  footer a:visited {
+    color: #000;
+    background: none;
+    padding: 0;
+  }
+
+  footer * {
+    padding-left: 0;
+  }
+}
